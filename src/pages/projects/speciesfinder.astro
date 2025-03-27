@@ -1,0 +1,62 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { Image } from "astro:assets";
+import speciesFinderImage from "../../../public/speciesFinder.png";
+// Import actual screenshots when available
+// import screenshot1 from "../../../public/screenshots/speciesfinder-1.png";
+// import screenshot2 from "../../../public/screenshots/speciesfinder-2.png";
+
+// You can add more screenshots as needed
+---
+
+<ProjectLayout
+  title="SpeciesFinder"
+  description="SpeciesFinder is a web application designed to help users identify and learn about various plant and animal species. The app provides an intuitive interface for exploring biodiversity and accessing detailed information about different organisms."
+  image={speciesFinderImage}
+  technologies={["JavaScript", "HTML5", "CSS3", "API Integration", "Responsive Design"]}
+  github="https://github.com/JustinDotRocks/SpeciesFinder"
+  liveUrl="https://justindotrocks.github.io/SpeciesFinder/#"
+>
+  <div slot="description">
+    <p class="mb-4">
+      SpeciesFinder leverages modern web technologies to create a seamless experience for nature enthusiasts, 
+      researchers, and curious minds. Users can search for species by name, category, or habitat, 
+      and access comprehensive information about each entry.
+    </p>
+    <p class="mb-4">
+      Key features include:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>Comprehensive species database</li>
+      <li>Advanced search and filtering capabilities</li>
+      <li>Detailed information cards for each species</li>
+      <li>High-quality imagery for species identification</li>
+      <li>User-friendly, responsive interface</li>
+      <li>Habitat and distribution information</li>
+    </ul>
+    <p>
+      This project demonstrates my skills in building interactive web applications, working with 
+      external APIs, and creating intuitive user interfaces that make complex information accessible.
+    </p>
+  </div>
+
+  <div slot="screenshots">
+    <!-- For now, using the same image as a placeholder for screenshots -->
+    <!-- Replace with actual screenshots when available -->
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={speciesFinderImage} alt="SpeciesFinder Search Interface" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Search Interface</h3>
+        <p class="text-sm text-[var(--white-icon)]">The main search and filtering interface</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={speciesFinderImage} alt="SpeciesFinder Detail View" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Species Detail View</h3>
+        <p class="text-sm text-[var(--white-icon)]">Detailed information about a selected species</p>
+      </div>
+    </div>
+  </div>
+</ProjectLayout> 

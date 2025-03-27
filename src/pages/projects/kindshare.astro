@@ -1,0 +1,68 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { Image } from "astro:assets";
+import kindshareImage from "../../../public/kindshareImage.png";
+// Import actual screenshots when available
+// import screenshot1 from "../../../public/screenshots/kindshare-1.png";
+// import screenshot2 from "../../../public/screenshots/kindshare-2.png";
+
+// You can add more screenshots as needed
+---
+
+<ProjectLayout
+  title="KindShare"
+  description="A cross-platform application designed to connect donors with those in need, facilitating the sharing of essential items and services within communities."
+  image={kindshareImage}
+  technologies={["React Native", "AWS Amplify", "GraphQL", "Authentication", "Geolocation", "Cross-Platform"]}
+  github="https://apps.apple.com/ca/app/kindshare/id6742789171"
+  liveUrl="https://main.dvcekq4fuy27d.amplifyapp.com/sign-in"
+>
+  <div slot="description">
+    <p class="mb-4">
+      KindShare is a mobile and web application that bridges the gap between those with resources to share and 
+      individuals in need. The platform creates a community-driven ecosystem where users can easily donate items 
+      they no longer need or find essential items they require.
+    </p>
+    <p class="mb-4">
+      Key features include:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>Cross-platform functionality with seamless mobile and web experiences</li>
+      <li>Secure user authentication and profile management</li>
+      <li>Item listing with detailed descriptions and images</li>
+      <li>Location-based search to find nearby donations</li>
+      <li>In-app messaging for coordination between donors and recipients</li>
+      <li>Donation tracking and history</li>
+      <li>Community engagement features including ratings and reviews</li>
+    </ul>
+    <p class="mb-4">
+      This project showcases my ability to develop full-stack applications that utilize modern 
+      frameworks and cloud services. KindShare leverages AWS Amplify for backend infrastructure, 
+      GraphQL for efficient data operations, and React Native for cross-platform compatibility.
+    </p>
+    <p>
+      The application emphasizes user experience, security, and performance, creating a platform 
+      that not only serves a practical purpose but also fosters community connections and social good.
+    </p>
+  </div>
+
+  <div slot="screenshots">
+    <!-- For now, using the same image as a placeholder for screenshots -->
+    <!-- Replace with actual screenshots when available -->
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={kindshareImage} alt="KindShare Mobile App" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Mobile Interface</h3>
+        <p class="text-sm text-[var(--white-icon)]">The KindShare mobile app interface showing available donations</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={kindshareImage} alt="KindShare Web Platform" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Web Dashboard</h3>
+        <p class="text-sm text-[var(--white-icon)]">The web platform dashboard displaying user activity and available items</p>
+      </div>
+    </div>
+  </div>
+</ProjectLayout> 

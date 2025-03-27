@@ -13,6 +13,7 @@ interface Project {
   link: string;
   preview: string;
   status: string;
+  detailsPage?: string; // Optional URL to the project details page
 }
 
 const projects: Project[] = [
@@ -22,6 +23,7 @@ const projects: Project[] = [
     link: "https://apps.apple.com/ca/app/kindshare/id6742789171",
     preview: "https://main.dvcekq4fuy27d.amplifyapp.com/sign-in",
     status: "Mobile & Web App",
+    detailsPage: "/projects/kindshare", // Link to the Astro project page
   },
   {
     title: "SMU Interactive Campus Map",
@@ -29,6 +31,7 @@ const projects: Project[] = [
     link: "https://smu-phase1-tpg.onrender.com/",
     preview: "https://smu-phase1-tpg.onrender.com/",
     status: "Web App",
+    detailsPage: "/projects/smu-map", // Link to the Astro project page
   },
   {
     title: "MarkIT",
@@ -36,6 +39,7 @@ const projects: Project[] = [
     link: "https://github.com/JustinDotRocks/MarkIT-V1.1",
     preview: "https://justindotrocks.github.io/MarkIT-V1.1/",
     status: "Web App",
+    detailsPage: "/projects/markit", // Link to the Astro project page
   },
   {
     title: "SpeciesFinder",
@@ -43,6 +47,7 @@ const projects: Project[] = [
     link: "https://github.com/JustinDotRocks/SpeciesFinder",
     preview: "https://justindotrocks.github.io/SpeciesFinder/#",
     status: "Web App",
+    detailsPage: "/projects/speciesfinder", // Link to the Astro project page
   },
 ];
 ---
@@ -60,9 +65,9 @@ const projects: Project[] = [
         projects.map((project) => (
           <div class="group">
             <a
-              href={project.preview}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={project.detailsPage || project.preview}
+              target={project.detailsPage ? "_self" : "_blank"}
+              rel={project.detailsPage ? "" : "noopener noreferrer"}
               class="block"
             >
               <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
@@ -85,6 +90,7 @@ const projects: Project[] = [
                     href={project.link}
                     aria-label="GitHub"
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -95,21 +101,41 @@ const projects: Project[] = [
                       <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
                     </svg>
                   </a>
-                  <a
-                    target="_blank"
-                    href={project.preview}
-                    aria-label="Preview"
-                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="size-7"
+                  {!project.detailsPage && (
+                    <a
+                      target="_blank"
+                      href={project.preview}
+                      aria-label="Preview"
+                      class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
-                    </svg>
-                  </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-7"
+                      >
+                        <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                      </svg>
+                    </a>
+                  )}
+                  {project.detailsPage && (
+                    <a
+                      href={project.detailsPage}
+                      aria-label="Details"
+                      class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-7"
+                      >
+                        <path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path>
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
             </a>

@@ -1,0 +1,61 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { Image } from "astro:assets";
+import markitImage from "../../../public/markitImage.png";
+// Import actual screenshots when available
+// import screenshot1 from "../../../public/screenshots/markit-1.png";
+// import screenshot2 from "../../../public/screenshots/markit-2.png";
+
+// You can add more screenshots as needed
+---
+
+<ProjectLayout
+  title="MarkIT"
+  description="MarkIT is a powerful stock tracking application that allows users to monitor their investments, track market trends, and make informed financial decisions. Built with modern web technologies, it offers a responsive and intuitive user interface for managing your stock portfolio."
+  image={markitImage}
+  technologies={["React", "TypeScript", "TailwindCSS", "API Integration"]}
+  github="https://github.com/JustinDotRocks/MarkIT-V1.1"
+  liveUrl="https://justindotrocks.github.io/MarkIT-V1.1/"
+>
+  <div slot="description">
+    <p class="mb-4">
+      The application gives users the ability to track multiple stocks simultaneously, 
+      view detailed performance metrics, and analyze historical data. The interface is designed 
+      to be clean and easy to navigate, making complex financial information accessible.
+    </p>
+    <p class="mb-4">
+      Key features include:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>Real-time stock price updates</li>
+      <li>Portfolio performance tracking</li>
+      <li>Historical data visualization</li>
+      <li>Customizable watchlists</li>
+      <li>Mobile-responsive design</li>
+    </ul>
+    <p>
+      The project demonstrates my ability to work with APIs, manage complex state, and create
+      intuitive user interfaces for data-heavy applications.
+    </p>
+  </div>
+
+  <div slot="screenshots">
+    <!-- For now, using the same image as a placeholder for screenshots -->
+    <!-- Replace with actual screenshots when available -->
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={markitImage} alt="MarkIT Dashboard" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Dashboard View</h3>
+        <p class="text-sm text-[var(--white-icon)]">The main interface showing stock performance</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={markitImage} alt="MarkIT Stock Detail" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Stock Detail View</h3>
+        <p class="text-sm text-[var(--white-icon)]">Detailed view of individual stock performance</p>
+      </div>
+    </div>
+  </div>
+</ProjectLayout> 
