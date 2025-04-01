@@ -2,41 +2,38 @@
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { Image } from "astro:assets";
 import kindshareImage from "../../../public/kindshareImage.png";
-// Import actual screenshots when available
-// import screenshot1 from "../../../public/screenshots/kindshare-1.png";
-// import screenshot2 from "../../../public/screenshots/kindshare-2.png";
+import kindshareMain from "../../../public/screenshots/kindshareMain.png";
+// Import actual screenshots
+import screenshot1 from "../../../public/screenshots/kindshare-1.png";
+import screenshot2 from "../../../public/screenshots/kindshare-2.png";
+import screenshot3 from "../../../public/screenshots/kindshare-3.png";
+import screenshot4 from "../../../public/screenshots/kindshare-4.png";
 
 // You can add more screenshots as needed
 ---
 
 <ProjectLayout
   title="KindShare"
-  description="A cross-platform application designed to connect donors with those in need, facilitating the sharing of essential items and services within communities."
-  image={kindshareImage}
-  technologies={["React Native", "AWS Amplify", "GraphQL", "Authentication", "Geolocation", "Cross-Platform"]}
-  github="https://apps.apple.com/ca/app/kindshare/id6742789171"
+  description="A cross-platform application designed to connect volunteers with persons with disabilities, facilitating the sharing of essential items and services within the COD-NL community."
+  image={kindshareMain}
+  technologies={["React Native", "TypeScript", "AWS Amplify", "Cognito", "DynamoDB", "Lambda", "GraphQL", "Expo", "Authentication", "Geolocation", "Cross-Platform"]}
   liveUrl="https://main.dvcekq4fuy27d.amplifyapp.com/sign-in"
 >
   <div slot="description">
     <p class="mb-4">
-      KindShare is a mobile and web application that bridges the gap between those with resources to share and 
-      individuals in need. The platform creates a community-driven ecosystem where users can easily donate items 
-      they no longer need or find essential items they require.
-    </p>
-    <p class="mb-4">
       Key features include:
     </p>
     <ul class="list-disc pl-6 mb-6 space-y-2">
-      <li>Cross-platform functionality with seamless mobile and web experiences</li>
-      <li>Secure user authentication and profile management</li>
-      <li>Item listing with detailed descriptions and images</li>
-      <li>Location-based search to find nearby donations</li>
-      <li>In-app messaging for coordination between donors and recipients</li>
-      <li>Donation tracking and history</li>
-      <li>Community engagement features including ratings and reviews</li>
+      <li>Cross-platform application connecting beneficiaries with volunteers for snow clearing, donations, and transportation assistance</li>
+      <li>Built with accessibility as a priority, including full screen reader support and intuitive navigation</li>
+      <li>Location-based services showing approximate locations for browsing and exact locations for accepted tasks</li>
+      <li>Dedicated volunteer dashboard displaying available requests in the community</li>
+      <li>Request tracking system allowing beneficiaries to monitor their requests and volunteer acceptance status</li>
+      <li>Integrated thank-you feature enabling beneficiaries to express gratitude upon task completion</li>
+      <li>User-friendly interface designed for ease of use across all accessibility needs</li>
     </ul>
     <p class="mb-4">
-      This project showcases my ability to develop full-stack applications that utilize modern 
+      This project showcases my ability to develop full-stack mobile applications that utilize modern 
       frameworks and cloud services. KindShare leverages AWS Amplify for backend infrastructure, 
       GraphQL for efficient data operations, and React Native for cross-platform compatibility.
     </p>
@@ -47,21 +44,61 @@ import kindshareImage from "../../../public/kindshareImage.png";
   </div>
 
   <div slot="screenshots">
-    <!-- For now, using the same image as a placeholder for screenshots -->
-    <!-- Replace with actual screenshots when available -->
-    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={kindshareImage} alt="KindShare Mobile App" class="w-full h-auto" />
-      <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Mobile Interface</h3>
-        <p class="text-sm text-[var(--white-icon)]">The KindShare mobile app interface showing available donations</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+        <Image src={screenshot1} alt="KindShare Mobile App - Requests Page" class="w-full h-auto" />
+        <div class="bg-[#1414149c] p-3">
+          <h3 class="text-[var(--white)] font-medium text-sm">Request Types</h3>
+          <p class="text-xs text-[var(--white-icon)]">Options for snow clearing, donations, and rides</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+        <Image src={screenshot2} alt="KindShare Mobile App - Donation Form" class="w-full h-auto" />
+        <div class="bg-[#1414149c] p-3">
+          <h3 class="text-[var(--white)] font-medium text-sm">Donation Request</h3>
+          <p class="text-xs text-[var(--white-icon)]">Clothing donation form with size selection</p>
+        </div>
+      </div>
+      
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+        <Image src={screenshot3} alt="KindShare Mobile App - Activity Page" class="w-full h-auto" />
+        <div class="bg-[#1414149c] p-3">
+          <h3 class="text-[var(--white)] font-medium text-sm">Activity Tracking</h3>
+          <p class="text-xs text-[var(--white-icon)]">Tracking donation and service requests</p>
+        </div>
+      </div>
+      
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+        <Image src={screenshot4} alt="KindShare Mobile App - Free Ride Request" class="w-full h-auto" />
+        <div class="bg-[#1414149c] p-3">
+          <h3 class="text-[var(--white)] font-medium text-sm">Free Ride Request</h3>
+          <p class="text-xs text-[var(--white-icon)]">Interface for scheduling rides</p>
+        </div>
       </div>
     </div>
 
-    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={kindshareImage} alt="KindShare Web Platform" class="w-full h-auto" />
-      <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Web Dashboard</h3>
-        <p class="text-sm text-[var(--white-icon)]">The web platform dashboard displaying user activity and available items</p>
+    <div class="mt-8">
+      <h2 class="text-xl font-semibold text-[var(--white)] mb-4">Available on App Store</h2>
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)] max-w-[350px]">
+          <a href="https://apps.apple.com/ca/app/kindshare/id6742789171" target="_blank" rel="noopener noreferrer">
+            <Image src={kindshareMain} alt="KindShare on App Store" class="w-full h-auto" />
+            <div class="bg-[#1414149c] p-3">
+              <h3 class="text-[var(--white)] font-medium">App Store Deployment</h3>
+              <p class="text-sm text-[var(--white-icon)]">KindShare is available for download on the App Store</p>
+            </div>
+          </a>
+        </div>
+        <div class="flex-1 p-4 bg-[#1414149c] rounded-xl">
+          <p class="text-[var(--white)] mb-2">KindShare has been officially deployed to the Apple App Store, making it accessible to iOS users worldwide.</p>
+          <p class="text-[var(--white-icon)]">The app has been tested and meets Apple's strict quality guidelines for performance, security, and user experience.</p>
+          <div class="mt-4">
+            <a href="https://apps.apple.com/ca/app/kindshare/id6742789171" class="inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors" target="_blank" rel="noopener noreferrer">
+              View on App Store
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { Image } from "astro:assets";
 import markitImage from "../../../public/markitImage.png";
+import markit1 from "../../../public/screenshots/markit-1.png";
 // Import actual screenshots when available
 // import screenshot1 from "../../../public/screenshots/markit-1.png";
 // import screenshot2 from "../../../public/screenshots/markit-2.png";
@@ -11,50 +12,66 @@ import markitImage from "../../../public/markitImage.png";
 
 <ProjectLayout
   title="MarkIT"
-  description="MarkIT is a powerful stock tracking application that allows users to monitor their investments, track market trends, and make informed financial decisions. Built with modern web technologies, it offers a responsive and intuitive user interface for managing your stock portfolio."
+  description="An interactive event space management application designed to simplify the planning and organization of event layouts for event planners and venue managers."
   image={markitImage}
-  technologies={["React", "TypeScript", "TailwindCSS", "API Integration"]}
+  technologies={["React", "TypeScript", "Tailwind CSS", "Konva.js", "Local Storage", "Material-UI"]}
   github="https://github.com/JustinDotRocks/MarkIT-V1.1"
   liveUrl="https://justindotrocks.github.io/MarkIT-V1.1/"
 >
   <div slot="description">
     <p class="mb-4">
-      The application gives users the ability to track multiple stocks simultaneously, 
-      view detailed performance metrics, and analyze historical data. The interface is designed 
-      to be clean and easy to navigate, making complex financial information accessible.
+      MarkIT is an innovative event space management application that streamlines the process of planning 
+      and organizing event layouts. Built with event planners and venue managers in mind, it offers an 
+      intuitive interface for designing and managing event spaces.
     </p>
     <p class="mb-4">
       Key features include:
     </p>
     <ul class="list-disc pl-6 mb-6 space-y-2">
-      <li>Real-time stock price updates</li>
-      <li>Portfolio performance tracking</li>
-      <li>Historical data visualization</li>
-      <li>Customizable watchlists</li>
-      <li>Mobile-responsive design</li>
+      <h3 class="font-medium text-[var(--white)] mt-4 mb-2">Venue Mode</h3>
+      <li>Interactive room design with drag-and-drop functionality and collision detection</li>
+      <li>Table and feature placement with rotation capabilities</li>
+      <li>Direct vendor assignment to tables within the layout</li>
+      <li>Layout protection with object locking mechanism</li>
+
+      <h3 class="font-medium text-[var(--white)] mt-4 mb-2">Vendor Mode</h3>
+      <li>Comprehensive vendor management system</li>
+      <li>Detailed vendor information tracking (names, products, descriptions, electricity needs)</li>
+      <li>Real-time vendor status updates with visual table highlighting</li>
+      <li>Vendor check-in system with visual feedback</li>
+
+      <h3 class="font-medium text-[var(--white)] mt-4 mb-2">Recent Updates</h3>
+      <li>Intuitive icon-based navigation with Material-UI tooltips</li>
+      <li>Improved options bar placement for better accessibility</li>
+      <li>Enhanced onboarding experience with guided room creation</li>
+      <li>Bug fixes and performance improvements</li>
     </ul>
+    <p class="mb-4">
+      This project showcases my ability to create complex, interactive web applications using modern 
+      technologies. The combination of React, TypeScript, and Konva.js enables smooth, responsive 
+      interactions while maintaining code quality and type safety.
+    </p>
     <p>
-      The project demonstrates my ability to work with APIs, manage complex state, and create
-      intuitive user interfaces for data-heavy applications.
+      MarkIT demonstrates my focus on user experience and attention to detail, from the intuitive 
+      drag-and-drop interface to the thoughtful implementation of features that solve real-world 
+      event planning challenges.
     </p>
   </div>
 
   <div slot="screenshots">
-    <!-- For now, using the same image as a placeholder for screenshots -->
-    <!-- Replace with actual screenshots when available -->
     <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={markitImage} alt="MarkIT Dashboard" class="w-full h-auto" />
+      <Image src={markitImage} alt="MarkIT Venue Mode" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Dashboard View</h3>
-        <p class="text-sm text-[var(--white-icon)]">The main interface showing stock performance</p>
+        <h3 class="text-[var(--white)] font-medium">Venue Design Interface</h3>
+        <p class="text-sm text-[var(--white-icon)]">Interactive room layout designer with drag-and-drop functionality</p>
       </div>
     </div>
 
     <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={markitImage} alt="MarkIT Stock Detail" class="w-full h-auto" />
+      <Image src={markit1} alt="MarkIT Vendor Management" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Stock Detail View</h3>
-        <p class="text-sm text-[var(--white-icon)]">Detailed view of individual stock performance</p>
+        <h3 class="text-[var(--white)] font-medium">Vendor Management</h3>
+        <p class="text-sm text-[var(--white-icon)]">Comprehensive vendor information and table assignment system</p>
       </div>
     </div>
   </div>

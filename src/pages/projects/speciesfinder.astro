@@ -2,6 +2,10 @@
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { Image } from "astro:assets";
 import speciesFinderImage from "../../../public/speciesFinder.png";
+import speciesFinder0 from "../../../public/screenshots/speciesFinder-0.png";
+import speciesFinder1 from "../../../public/screenshots/speciesFinder-1.png";
+import speciesFinder2 from "../../../public/screenshots/speciesFinder-2.png";
+import speciesFinder3 from "../../../public/screenshots/speciesFinder-3.png";
 // Import actual screenshots when available
 // import screenshot1 from "../../../public/screenshots/speciesfinder-1.png";
 // import screenshot2 from "../../../public/screenshots/speciesfinder-2.png";
@@ -11,51 +15,71 @@ import speciesFinderImage from "../../../public/speciesFinder.png";
 
 <ProjectLayout
   title="SpeciesFinder"
-  description="SpeciesFinder is a web application designed to help users identify and learn about various plant and animal species. The app provides an intuitive interface for exploring biodiversity and accessing detailed information about different organisms."
+  description="A dynamic web application designed to enhance the exploration and learning experience at Manuels River, serving as a digital gateway to discover the diverse species along the river's trails."
   image={speciesFinderImage}
-  technologies={["JavaScript", "HTML5", "CSS3", "API Integration", "Responsive Design"]}
+  technologies={["HTML", "CSS", "JavaScript", "TailwindCSS", "Node.js", "API Integration", "Mobile-First Design"]}
   github="https://github.com/JustinDotRocks/SpeciesFinder"
   liveUrl="https://justindotrocks.github.io/SpeciesFinder/#"
 >
   <div slot="description">
     <p class="mb-4">
-      SpeciesFinder leverages modern web technologies to create a seamless experience for nature enthusiasts, 
-      researchers, and curious minds. Users can search for species by name, category, or habitat, 
-      and access comprehensive information about each entry.
+      SpeciesFinder transforms the traditional guidebook concept into an interactive digital experience, 
+      making the discovery of Manuels River's biodiversity engaging and accessible. This mobile-optimized 
+      tool serves as a bridge between nature enthusiasts and the rich biodiversity of the river, promoting 
+      conservation and awareness through digital innovation.
     </p>
     <p class="mb-4">
       Key features include:
     </p>
     <ul class="list-disc pl-6 mb-6 space-y-2">
-      <li>Comprehensive species database</li>
-      <li>Advanced search and filtering capabilities</li>
-      <li>Detailed information cards for each species</li>
-      <li>High-quality imagery for species identification</li>
-      <li>User-friendly, responsive interface</li>
-      <li>Habitat and distribution information</li>
+      <li>Interactive species cards with detailed descriptions and high-quality images</li>
+      <li>Location information to help visitors find species along the river valley</li>
+      <li>Mobile-optimized design for easy trail-side use</li>
+      <li>Favorites system for quick access to frequently viewed species</li>
+      <li>Educational content about each species' role in the ecosystem</li>
+      <li>User-friendly navigation designed for all age groups</li>
     </ul>
+    <p class="mb-4">
+      This project was developed in collaboration with the Education team at Manuels River, whose expertise 
+      provided invaluable insights into the species and their habitats. The application demonstrates the 
+      power of technology to enhance environmental education and outdoor experiences.
+    </p>
     <p>
-      This project demonstrates my skills in building interactive web applications, working with 
-      external APIs, and creating intuitive user interfaces that make complex information accessible.
+      Whether you're planning a visit or simply curious about the natural world, SpeciesFinder provides an 
+      accessible and informative resource that connects people with nature through digital innovation.
     </p>
   </div>
 
   <div slot="screenshots">
-    <!-- For now, using the same image as a placeholder for screenshots -->
-    <!-- Replace with actual screenshots when available -->
     <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={speciesFinderImage} alt="SpeciesFinder Search Interface" class="w-full h-auto" />
+      <Image src={speciesFinder0} alt="SpeciesFinder Species List" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Search Interface</h3>
-        <p class="text-sm text-[var(--white-icon)]">The main search and filtering interface</p>
+        <h3 class="text-[var(--white)] font-medium">Species List View</h3>
+        <p class="text-sm text-[var(--white-icon)]">Browse and search through the comprehensive list of species</p>
       </div>
     </div>
 
-    <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={speciesFinderImage} alt="SpeciesFinder Detail View" class="w-full h-auto" />
+    <div class="mt-6 rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={speciesFinder1} alt="SpeciesFinder Species Details Top" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Species Detail View</h3>
-        <p class="text-sm text-[var(--white-icon)]">Detailed information about a selected species</p>
+        <h3 class="text-[var(--white)] font-medium">Species Details - Overview</h3>
+        <p class="text-sm text-[var(--white-icon)]">Detailed species information including images and key characteristics</p>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={speciesFinder2} alt="SpeciesFinder Species Details Bottom" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Species Details - Extended</h3>
+        <p class="text-sm text-[var(--white-icon)]">Additional species information including habitat and distribution</p>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
+      <Image src={speciesFinder3} alt="SpeciesFinder Favorites Screen" class="w-full h-auto" />
+      <div class="bg-[#1414149c] p-4">
+        <h3 class="text-[var(--white)] font-medium">Favorites Screen</h3>
+        <p class="text-sm text-[var(--white-icon)]">Interactive favorites view with clickable species images for quick navigation</p>
       </div>
     </div>
   </div>

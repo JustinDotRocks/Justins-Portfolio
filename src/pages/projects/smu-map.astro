@@ -2,6 +2,10 @@
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { Image } from "astro:assets";
 import smuMapImage from "../../../public/smuMap.png";
+// Uncomment to use the new image
+import campusMapMain from "../../../public/screenshots/campusMap-1.png";
+import campusMap3 from "../../../public/screenshots/campusMap-3.png";
+import campusMap4 from "../../../public/screenshots/campusMap-4.png";
 // Import actual screenshots when available
 // import screenshot1 from "../../../public/screenshots/smu-map-1.png";
 // import screenshot2 from "../../../public/screenshots/smu-map-2.png";
@@ -12,27 +16,23 @@ import smuMapImage from "../../../public/smuMap.png";
 <ProjectLayout
   title="SMU Interactive Campus Map"
   description="An interactive digital map solution designed for Saint Mary's University, providing users with an intuitive way to navigate the campus and locate facilities, services, and points of interest."
-  image={smuMapImage}
-  technologies={["JavaScript", "HTML5", "CSS3", "Interactive Mapping", "Responsive Design"]}
-  github="https://smu-phase1-tpg.onrender.com/"
+  image={campusMapMain}
+  technologies={["JavaScript", "Next.js", "HTML5", "CSS3", "Interactive Map", "Responsive Design"]}
   liveUrl="https://smu-phase1-tpg.onrender.com/"
 >
   <div slot="description">
     <p class="mb-4">
       The SMU Interactive Campus Map is a web-based application that transforms how students, 
-      faculty, and visitors navigate the Saint Mary's University campus. This project was developed 
-      to enhance the campus experience by providing an accessible and user-friendly mapping solution.
+      faculty, and visitors navigate the Saint Mary's University campus.
     </p>
     <p class="mb-4">
       Key features include:
     </p>
     <ul class="list-disc pl-6 mb-6 space-y-2">
       <li>Interactive campus buildings and facilities</li>
-      <li>Detailed information for campus points of interest</li>
-      <li>Search functionality for quick location finding</li>
+      <li>Detailed information for campus buildings and their amenities</li>
       <li>Accessibility information for buildings</li>
       <li>Mobile-responsive design for on-the-go navigation</li>
-      <li>Integration with university services and resources</li>
     </ul>
     <p class="mb-4">
       This project demonstrates my ability to build practical web applications that solve 
@@ -46,21 +46,19 @@ import smuMapImage from "../../../public/smuMap.png";
   </div>
 
   <div slot="screenshots">
-    <!-- For now, using the same image as a placeholder for screenshots -->
-    <!-- Replace with actual screenshots when available -->
     <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={smuMapImage} alt="SMU Map Overview" class="w-full h-auto" />
+      <Image src={campusMap4} alt="SMU Interactive Campus Map - Campus Overview" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Campus Overview</h3>
-        <p class="text-sm text-[var(--white-icon)]">The main interactive map interface showing the entire campus</p>
+        <h3 class="text-[var(--white)] font-medium">Campus Features</h3>
+        <p class="text-sm text-[var(--white-icon)]">Overview of campus facilities including parking, bicycle stations, and washrooms</p>
       </div>
     </div>
 
     <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)]">
-      <Image src={smuMapImage} alt="Building Detail View" class="w-full h-auto" />
+      <Image src={campusMap3} alt="SMU Interactive Campus Map - Building Details" class="w-full h-auto" />
       <div class="bg-[#1414149c] p-4">
-        <h3 class="text-[var(--white)] font-medium">Building Detail View</h3>
-        <p class="text-sm text-[var(--white-icon)]">Detailed information about a selected campus building</p>
+        <h3 class="text-[var(--white)] font-medium">Building Information</h3>
+        <p class="text-sm text-[var(--white-icon)]">Detailed view showing building accessibility features and amenities</p>
       </div>
     </div>
   </div>

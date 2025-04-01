@@ -5,7 +5,9 @@ import markitImage from "../../public/markitImage.png";
 import moviesfordevs from "../../public/moviesfordevs.png";
 import speciesFinder from "../../public/speciesFinder.png"
 import smuMap from "../../public/smuMap.png"
-import kindshareImage from "../../public/kindshareImage.png"
+// Using the new images
+import campusMap1 from "../../public/screenshots/campusMap-1.png"
+import kindshareMain from "../../public/screenshots/kindshareMain.png"
 
 interface Project {
   title: string;
@@ -19,7 +21,7 @@ interface Project {
 const projects: Project[] = [
    {
     title: "KindShare",
-    image: kindshareImage as ImageMetadata,
+    image: kindshareMain as ImageMetadata,
     link: "https://apps.apple.com/ca/app/kindshare/id6742789171",
     preview: "https://main.dvcekq4fuy27d.amplifyapp.com/sign-in",
     status: "Mobile & Web App",
@@ -27,7 +29,7 @@ const projects: Project[] = [
   },
   {
     title: "SMU Interactive Campus Map",
-    image: smuMap as ImageMetadata,
+    image: campusMap1 as ImageMetadata,
     link: "https://smu-phase1-tpg.onrender.com/",
     preview: "https://smu-phase1-tpg.onrender.com/",
     status: "Web App",
