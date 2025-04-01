@@ -42,10 +42,20 @@ const SkillsList = () => {
 			"Single Page Applications (SPAs)",
 			"Landing pages and business websites",
 			"Portfolio websites",
+			"Technologies:",
+			"  React, TypeScript, JavaScript",
+			"  Node.js, AWS , MySQL",
+			"  Material-UI, TailwindCSS",
 		],
 		"Mobile Development": [
 			"Mobile-friendly web apps",
 			"React Native mobile apps",
+			"Technologies:",
+			"  React Native, Expo, TypeScript, JavaScript",
+			"  AWS Amplify, Cognito",
+			"  Lambda, DynamoDB",
+			"  GraphQL",
+			"  Deployment to App Stores",
 		],
 		"UI/UX Design & Prototyping": [
 			"UI design with Figma & Canva",
@@ -108,15 +118,19 @@ const SkillsList = () => {
 												key={
 													index
 												}
-												className="flex items-center"
+												className={`flex items-center ${item.startsWith("  ") ? "ml-6" : ""}`}
 											>
-												<span className="pl-1">
-													•
-												</span>
-												<li className="pl-3">
-													{
-														item
-													}
+												{!item.startsWith(
+													"  "
+												) && (
+													<span className="pl-1">
+														•
+													</span>
+												)}
+												<li
+													className={`${item.startsWith("  ") ? "pl-0" : "pl-3"}`}
+												>
+													{item.trim()}
 												</li>
 											</div>
 										)
