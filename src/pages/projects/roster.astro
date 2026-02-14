@@ -152,7 +152,7 @@ import screenshot8 from "../../../public/screenshots/roster-8.png";
     <script>
       (function () {
         const lightbox = document.getElementById('roster-lightbox');
-        const lightboxImg = document.getElementById('roster-lightbox-img');
+        const lightboxImg = document.getElementById('roster-lightbox-img') as HTMLImageElement | null;
         const closeBtn = document.getElementById('roster-lightbox-close');
         if (!lightbox || !lightboxImg) return;
 
