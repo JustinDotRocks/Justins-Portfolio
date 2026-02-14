@@ -8,6 +8,7 @@ import smuMap from "../../public/smuMap.png"
 // Using the new images
 import campusMap1 from "../../public/screenshots/campusMap-1.png"
 import kindshareMain from "../../public/screenshots/kindshareMain.png"
+import rosterHeader1 from "../../public/roster-header-1.png"
 
 interface Project {
   title: string;
@@ -19,7 +20,15 @@ interface Project {
 }
 
 const projects: Project[] = [
-   {
+  {
+    title: "Roster",
+    image: rosterHeader1 as ImageMetadata,
+    link: "https://getrosterapp.org",
+    preview: "https://getrosterapp.org",
+    status: "Mobile & Web App",
+    detailsPage: "/projects/roster",
+  },
+  {
     title: "KindShare",
     image: kindshareMain as ImageMetadata,
     link: "https://apps.apple.com/ca/app/kindshare/id6742789171",
