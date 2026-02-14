@@ -10,9 +10,15 @@ interface Props {
   technologies: string[];
   github?: string;
   liveUrl?: string;
+  websiteUrl?: string;
+  websiteLabel?: string;
+  /** When set, show this video as the hero instead of the image (e.g. /roster-ad.mp4). */
+  heroVideo?: string;
+  /** Poster image shown until the hero video is played (e.g. /roster-header-1.png). */
+  heroPoster?: string;
 }
 
-const { title, description, image, technologies, github, liveUrl } = Astro.props;
+const { title, description, image, technologies, github, liveUrl, websiteUrl, websiteLabel, heroVideo, heroPoster } = Astro.props;
 ---
 
 <Layout title={`${title} | Justin Smith`}>
@@ -29,11 +35,22 @@ const { title, description, image, technologies, github, liveUrl } = Astro.props
     <h1 class="text-3xl md:text-4xl font-bold text-[var(--white)] mb-4">{title}</h1>
     
     <div class="rounded-2xl overflow-hidden shadow-lg mb-8 max-w-6xl">
-      <Image 
-        src={image} 
-        alt={title} 
-        class="w-full h-auto max-h-[750px] object-cover"
-      />
+      {heroVideo ? (
+        <video
+          src={heroVideo}
+          poster={heroPoster}
+          controls
+          class="w-full h-auto max-h-[750px] object-cover"
+        >
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <Image 
+          src={image} 
+          alt={title} 
+          class="w-full h-auto max-h-[750px] object-cover"
+        />
+      )}
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -77,6 +94,16 @@ const { title, description, image, technologies, github, liveUrl } = Astro.props
                 <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19V6.413L11.9142 13.5L10.5 12.0858L17.585 5H13V3H21Z"></path>
               </svg>
               Visit Project
+            </a>
+          )}
+
+          {websiteUrl && (
+            <a href={websiteUrl} target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 text-[var(--white-icon)] hover:text-[var(--white)] transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19V6.413L11.9142 13.5L10.5 12.0858L17.585 5H13V3H21Z"></path>
+              </svg>
+              {websiteLabel || "Website"}
             </a>
           )}
         </div>

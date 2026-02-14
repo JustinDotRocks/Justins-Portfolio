@@ -1,0 +1,248 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { Image } from "astro:assets";
+import rosterMain from "../../../public/screenshots/rosterMain.png";
+import screenshot1 from "../../../public/screenshots/roster-1.png";
+import screenshot2 from "../../../public/screenshots/roster-2.png";
+import screenshot3 from "../../../public/screenshots/roster-3.png";
+import screenshot4 from "../../../public/screenshots/roster-4.png";
+import screenshot5 from "../../../public/screenshots/roster-5.png";
+import screenshot6 from "../../../public/screenshots/roster-6.png";
+import screenshot7 from "../../../public/screenshots/roster-7.png";
+import screenshot8 from "../../../public/screenshots/roster-8.png";
+---
+
+<ProjectLayout
+  title="Roster"
+  description="Staff scheduling with AI. Manage shifts, departments, and your team in one place. Create multiple shifts from one prompt, set recurring schedules, and track time."
+  image={rosterMain}
+  heroVideo="/roster-ad.mp4"
+  heroPoster="/roster-header-1.png"
+  technologies={["React Native", "Expo", "TypeScript", "AWS Amplify", "Cognito", "DynamoDB", "Lambda", "OpenAI API", "React Navigation", "Cross-Platform"]}
+  websiteUrl="https://getrosterapp.org"
+  websiteLabel="Roster Website"
+>
+  <div slot="description">
+    <p class="mb-4">
+      Key features include:
+    </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>AI Scheduling:</strong> Create multiple shifts from a single prompt—describe what you need and let AI generate your schedule using OpenAI's GPT-4</li>
+      <li><strong>Recurring Shifts:</strong> Set repeat schedules (daily, weekly, or custom) so you don't recreate the same shifts every week</li>
+      <li><strong>Time Clock:</strong> Track clock-in and clock-out times so shifts and attendance stay in sync</li>
+      <li><strong>Department Organization:</strong> Organize staff and shifts by department with colors and clear views</li>
+      <li><strong>Staff Management:</strong> Invite and manage team members, roles, and permissions in one place</li>
+      <li><strong>Multiple Organizations:</strong> Run multiple locations or brands; switch between them and manage each roster separately</li>
+      <li><strong>Cross-Platform:</strong> Available on iOS and Android via React Native and Expo</li>
+    </ul>
+    <p class="mb-4">
+      This project demonstrates full-stack mobile development with modern technologies and AI integration. Roster uses AWS Amplify for backend infrastructure, DynamoDB and Lambda for data management, OpenAI's API for intelligent scheduling, and React Native with Expo for cross-platform delivery.
+    </p>
+    <p>
+      Built to eliminate spreadsheets and guesswork, Roster makes team scheduling simple, flexible, and intelligent—helping teams run their operations with less friction.
+    </p>
+  </div>
+
+  <div slot="screenshots">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="roster-screenshots">
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot1 === 'string' ? screenshot1 : screenshot1.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot1} alt="Roster Mobile App - Time clock home" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">Time clock</h3>
+          <p class="text-xs text-[var(--white-icon)]">Clock in and out, track hours on the home page</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot2 === 'string' ? screenshot2 : screenshot2.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot2} alt="Roster Mobile App - AI scheduling prompt" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">AI prompt for scheduling</h3>
+          <p class="text-xs text-[var(--white-icon)]">Describe your schedule needs for AI-assisted creation</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot3 === 'string' ? screenshot3 : screenshot3.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot3} alt="Roster Mobile App - AI shift review" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">AI shift review stage</h3>
+          <p class="text-xs text-[var(--white-icon)]">Review and adjust AI-generated shifts before publishing</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot4 === 'string' ? screenshot4 : screenshot4.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot4} alt="Roster Mobile App - Confirm and publish shifts" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">Confirm shifts and publish in batches</h3>
+          <p class="text-xs text-[var(--white-icon)]">Finalize and publish schedule updates</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot5 === 'string' ? screenshot5 : screenshot5.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot5} alt="Roster Mobile App - Shifts view" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">Shifts screen</h3>
+          <p class="text-xs text-[var(--white-icon)]">Visible across your team</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot6 === 'string' ? screenshot6 : screenshot6.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot6} alt="Roster Mobile App - Admin panel" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">Admin panel</h3>
+          <p class="text-xs text-[var(--white-icon)]">Organization, departments, shift management</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot7 === 'string' ? screenshot7 : screenshot7.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot7} alt="Roster Mobile App - Staff profile" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">Staff profile</h3>
+          <p class="text-xs text-[var(--white-icon)]">Staff info and logout</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[var(--white-icon-tr)] overflow-hidden">
+        <button type="button" class="roster-screenshot-trigger block w-full p-0 border-0 bg-transparent cursor-pointer hover:opacity-90 transition-opacity" data-lightbox-src={typeof screenshot8 === 'string' ? screenshot8 : screenshot8.src}>
+          <div class="overflow-hidden rounded-t-xl">
+            <Image src={screenshot8} alt="Roster Mobile App - OpenAI API key" class="w-full h-auto block pointer-events-none" />
+          </div>
+        </button>
+        <div class="bg-[#1414149c] p-3 rounded-b-xl border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium text-sm">OpenAI API key</h3>
+          <p class="text-xs text-[var(--white-icon)]">Adding OpenAI API key for AI shift creation</p>
+        </div>
+      </button>
+    </div>
+
+    <div id="roster-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80" role="dialog" aria-modal="true" aria-label="View screenshot">
+      <button type="button" class="absolute top-4 right-4 z-10 text-white hover:text-gray-300 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors" id="roster-lightbox-close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <img id="roster-lightbox-img" src="" alt="Screenshot full size" class="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl" />
+    </div>
+
+    <script>
+      (function () {
+        const lightbox = document.getElementById('roster-lightbox');
+        const lightboxImg = document.getElementById('roster-lightbox-img');
+        const closeBtn = document.getElementById('roster-lightbox-close');
+        if (!lightbox || !lightboxImg) return;
+
+        function openLightbox(src) {
+          lightboxImg.src = src;
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          lightboxImg.src = '';
+          document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.roster-screenshot-trigger').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const src = btn.getAttribute('data-lightbox-src');
+            if (src) openLightbox(src);
+          });
+        });
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeLightbox();
+        });
+      })();
+    </script>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-xl font-semibold text-[var(--white)] mb-4">Available on App Store</h2>
+    <div class="flex flex-col md:flex-row items-center gap-4">
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)] max-w-[350px] bg-[#0a0a0a] opacity-60">
+        <div class="block p-8 cursor-not-allowed">
+          <img 
+            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1634601600" 
+            alt="Download on the App Store" 
+            class="w-full h-auto grayscale"
+            width="250"
+            height="83"
+          />
+        </div>
+        <div class="bg-[#1414149c] p-3 border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium">App Store - Coming Soon</h3>
+          <p class="text-sm text-[var(--white-icon)]">Roster will be available on the App Store soon</p>
+        </div>
+      </div>
+      <div class="flex-1 p-4 bg-[#1414149c] rounded-xl">
+        <p class="text-[var(--white)] mb-2">Roster is in development and will be coming to the Apple App Store for iOS users.</p>
+        <p class="text-[var(--white-icon)]">The iOS version will include all features: AI scheduling, recurring shifts, time clock, departments, and team management.</p>
+        <div class="mt-4">
+          <button class="inline-block bg-gray-600 text-white py-2 px-4 rounded-lg cursor-not-allowed opacity-60" disabled>
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-xl font-semibold text-[var(--white)] mb-4">Available on Google Play Store</h2>
+    <div class="flex flex-col md:flex-row items-center gap-4">
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)] max-w-[350px] bg-[#0a0a0a] opacity-60">
+        <div class="block p-8 cursor-not-allowed">
+          <img 
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
+            alt="Get it on Google Play" 
+            class="w-full h-auto grayscale"
+            width="250"
+            height="98"
+          />
+        </div>
+        <div class="bg-[#1414149c] p-3 border-t border-[var(--white-icon-tr)]">
+          <h3 class="text-[var(--white)] font-medium">Google Play - Coming Soon</h3>
+          <p class="text-sm text-[var(--white-icon)]">Roster will be available on Google Play soon</p>
+        </div>
+      </div>
+      <div class="flex-1 p-4 bg-[#1414149c] rounded-xl">
+        <p class="text-[var(--white)] mb-2">Roster is in development and will be coming to the Google Play Store for Android users.</p>
+        <p class="text-[var(--white-icon)]">The Android version will include all features: AI scheduling, recurring shifts, time clock, departments, and team management.</p>
+        <div class="mt-4">
+          <button class="inline-block bg-gray-600 text-white py-2 px-4 rounded-lg cursor-not-allowed opacity-60" disabled>
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ProjectLayout>
