@@ -189,28 +189,38 @@ import screenshot8 from "../../../public/screenshots/roster-8.png";
   <div class="mt-8">
     <h2 class="text-xl font-semibold text-[var(--white)] mb-4">Available on App Store</h2>
     <div class="flex flex-col md:flex-row items-center gap-4">
-      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)] max-w-[350px] bg-[#0a0a0a] opacity-60">
-        <div class="block p-8 cursor-not-allowed">
+      <div class="rounded-xl overflow-hidden border border-[var(--white-icon-tr)] max-w-[350px] bg-[#0a0a0a]">
+        <a
+          href="https://apps.apple.com/ca/app/roster/id6758892068"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block p-8 hover:opacity-90 transition-opacity"
+        >
           <img 
             src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1634601600" 
             alt="Download on the App Store" 
-            class="w-full h-auto grayscale"
+            class="w-full h-auto"
             width="250"
             height="83"
           />
-        </div>
+        </a>
         <div class="bg-[#1414149c] p-3 border-t border-[var(--white-icon-tr)]">
-          <h3 class="text-[var(--white)] font-medium">App Store - Coming Soon</h3>
-          <p class="text-sm text-[var(--white-icon)]">Roster will be available on the App Store soon</p>
+          <h3 class="text-[var(--white)] font-medium">App Store</h3>
+          <p class="text-sm text-[var(--white-icon)]">Download Roster on the App Store</p>
         </div>
       </div>
       <div class="flex-1 p-4 bg-[#1414149c] rounded-xl">
-        <p class="text-[var(--white)] mb-2">Roster is in development and will be coming to the Apple App Store for iOS users.</p>
-        <p class="text-[var(--white-icon)]">The iOS version will include all features: AI scheduling, recurring shifts, time clock, departments, and team management.</p>
+        <p class="text-[var(--white)] mb-2">Roster is on the App Store. To get access to an organization, contact us through <strong>getrosterapp.org</strong> before or after you download the app.</p>
+        <p class="text-[var(--white-icon)]">Access is set up through the website—visit the contact page to request an invite and start scheduling.</p>
         <div class="mt-4">
-          <button class="inline-block bg-gray-600 text-white py-2 px-4 rounded-lg cursor-not-allowed opacity-60" disabled>
-            Coming Soon
-          </button>
+          <a
+            href="https://getrosterapp.org/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-[var(--white)] text-[#0a0a0a] py-2 px-4 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            Contact for access
+          </a>
         </div>
       </div>
     </div>
